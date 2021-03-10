@@ -1,19 +1,38 @@
+/* Colors
+#ffffff - white
+#f1f1f1 - gray
+#fdb827 - orange
+#21209c - blue/purple
+#23120b - black
+*/
+:root { /*pseudo selector, no existe en el html, root sirve para almacenar elementos css (custom properties)*/
+    --white: #ffffff;
+    --gray: #f1f1f1;
+    --orange: #fdb827;
+    --bluepurple: #21209c;
+    --black: #23120b;
+}
+
 html {
     box-sizing: border-box;
-     font-size: 62.5%;
+    font-size: 62.5%;
  }
  
  body {
-     font-size: 16px;/*1rem = 10px*/
+    font-size: 16px;/*1rem = 10px*/
  }
  
 .title {
-     text-align: center;
-     font-size: 2.8rem;
-     color: blue;
+    text-align: center;
+    font-size: 2.8rem;
+    color: var(--black);
  }
  
- .title span {
-     font-size: 2rem;
-     color:chartreuse;
+ h1.title span{
+    color:blue;
  }
+ .title span {
+    font-size: 2rem;
+    color:chartreuse;
+ }
+
