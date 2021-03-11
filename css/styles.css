@@ -13,6 +13,9 @@
     --black: #23120b;
 }
 
+/*font-family: 'Amaranth', sans-serif;
+font-family: 'Quicksand', sans-serif;*/
+
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -20,19 +23,46 @@ html {
  
  body {
     font-size: 16px;/*1rem = 10px*/
+    font-family: 'Quicksand', sans-serif;
  }
  
 .title {
     text-align: center;
     font-size: 2.8rem;
     color: var(--black);
+    font-family: 'Amaranth', sans-serif;
+    font-weight: normal; /*es lo mismo a 400, y bold a 700*/
  }
  
- h1.title span{
-    color:blue;
- }
  .title span {
     font-size: 2rem;
-    color:chartreuse;
+    color:var(--orange);
  }
 
+ .container {
+    width: 120rem;
+    margin: 0 auto;
+ }
+
+ .nav-bg {
+   background-color: var(--bluepurple);
+ }
+
+.main-navigation {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.main-navigation a{
+   color: var(--white);
+   text-decoration: none;
+   font-size: 2rem;
+   font-weight: bold;
+   padding: 1rem;
+}
+
+.main-navigation a:hover{
+   background-color: var(--orange);
+   color: var(--bluepurple);
+}
