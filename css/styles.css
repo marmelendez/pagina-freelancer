@@ -84,8 +84,8 @@ html {
    }
 } */
 
-@media (min-width: 768px) {
-    h1 {
-
-    }
+.hero {
+   background-image:url(../images/hero.jpg);
+   background-repeat:no-repeat; /*no se repite imagen*/
+   background-size: cover;
 }
