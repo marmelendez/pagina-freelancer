@@ -40,7 +40,7 @@ html {
  }
 
  .container {
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
  }
 
@@ -50,10 +50,16 @@ html {
 
 .main-navigation {
    display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
+   flex-direction: column;
+   align-items: center;
 }
 
+@media (min-width: 768px) { /*tablet*/
+   .main-navigation{
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+}
 .main-navigation a{
    color: var(--white);
    text-decoration: none;
@@ -67,12 +73,16 @@ html {
    color: var(--bluepurple);
 }
 
-/*Solo se coloca lo que quieres cambiar, no es necesario reescribir todo*/
-@media (min-width: 480px) { /*Cuando el width se aplica el siguiente codigo*/
+/*Solo se coloca lo que quieres cambiar, no es necesario reescribir todo
+480px --> telefono
+768px --> tablet
+1140px --> laptop/compu de escritorio
+1400px --> convencion
+@media (min-width: 480px) { Cuando el width se aplica el siguiente codigo
    body{
       background-color:rebeccapurple;
    }
-}
+} */
 
 @media (min-width: 768px) {
     h1 {
