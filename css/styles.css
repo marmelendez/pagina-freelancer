@@ -66,3 +66,16 @@ html {
    background-color: var(--orange);
    color: var(--bluepurple);
 }
+
+/*Solo se coloca lo que quieres cambiar, no es necesario reescribir todo*/
+@media (min-width: 480px) { /*Cuando el width se aplica el siguiente codigo*/
+   body{
+      background-color:rebeccapurple;
+   }
+}
+
+@media (min-width: 768px) {
+    h1 {
+
+    }
+}
