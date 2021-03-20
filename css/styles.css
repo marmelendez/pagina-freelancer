@@ -7,7 +7,7 @@
 */
 :root { /*pseudo selector, no existe en el html, root sirve para almacenar elementos css (custom properties)*/
     --white: #ffffff;
-    --gray: #f1f1f1;
+    --gray: #d2d2d2;
     --orange: #fdb827;
     --bluepurple: #21209c;
     --black: #23120b;
@@ -17,21 +17,34 @@
 font-family: 'Quicksand', sans-serif;*/
 
 html {
-    box-sizing: border-box;
     font-size: 62.5%;
+    box-sizing: border-box; /*padding, margen o border no afecta el tamaño de un elemento*/
+ }
+
+ *, *:before, *:after { /* el asterisco selecciona todos los elementos, before y after son pseudo selectores, aqui sirven para si en alguna parte del css se utilizan tambien aplicar el box model*/
+    box-sizing: inherit;
  }
  
  body {
     font-size: 16px;/*1rem = 10px*/
     font-family: 'Quicksand', sans-serif;
  }
- 
-.title {
+
+ h1{
+   font-size: 3.8rem;
+   font-family: 'Amaranth', sans-serif;
+ }
+
+ h2{
+   font-size: 2.8rem;
+ }
+
+ h3{
+   font-size: 1.8rem;
+ }
+
+ h1, h2, h3 {
     text-align: center;
-    font-size: 2.8rem;
-    color: var(--black);
-    font-family: 'Amaranth', sans-serif;
-    font-weight: normal; /*es lo mismo a 400, y bold a 700*/
  }
  
  .title span {
@@ -43,6 +56,26 @@ html {
     max-width: 120rem;
     margin: 0 auto;
  }
+
+ .button {
+   background: var(--gray);
+   color: var(--bluepurple);
+   padding: 7px 15px;
+   margin-top: 1rem;
+   font-size: 2rem;
+   font-weight: bold;
+   text-decoration: none;
+   border-radius: 1rem;
+   width: 80%;
+   text-align: center;
+}
+
+@media (min-width:768px){
+   .button{
+      width:auto;
+   }
+
+}
 
  .nav-bg {
    background-color: var(--bluepurple);
@@ -60,6 +93,18 @@ html {
       justify-content: space-evenly;
    }
 }
+
+/*Solo se coloca lo que quieres cambiar, no es necesario reescribir todo
+480px --> telefono
+768px --> tablet
+1140px --> laptop/compu de escritorio
+1400px --> convencion
+@media (min-width: 480px) { Cuando el width se aplica el siguiente codigo
+   body{
+      background-color:rebeccapurple;
+   }
+} */
+
 .main-navigation a{
    color: var(--white);
    text-decoration: none;
@@ -73,19 +118,30 @@ html {
    color: var(--bluepurple);
 }
 
-/*Solo se coloca lo que quieres cambiar, no es necesario reescribir todo
-480px --> telefono
-768px --> tablet
-1140px --> laptop/compu de escritorio
-1400px --> convencion
-@media (min-width: 480px) { Cuando el width se aplica el siguiente codigo
-   body{
-      background-color:rebeccapurple;
-   }
-} */
-
 .hero {
    background-image:url(../images/hero.jpg);
    background-repeat:no-repeat; /*no se repite imagen*/
    background-size: cover;
+   height: 450px;
+   position: relative; /*para que su hijo se pueda posicionar de forma absoluta*/
+}
+
+.content-hero { /*intento posicionar content-hero entonces el padre (en este caso hero) debe contar con posicion relativa*/
+   position: absolute;
+   /* background-color: rgba(253, 184, 39,0.2); el cuarto valor corresponde a la transparencia desde 0 (color nulo) hasta 1(color total)*/
+   background-color: rgb(33 32 156 / 20%); /*nueva sintaxis*/
+   width:100%;
+   height:100%;
+   /*con esto indicamos posicion en el mapa (coordenadas), con todos en 0 se expande en todo el mapa*/
+   /*coordenadas: top, bottom, left, right, nuestro padre vendria siendo como el mapa*/
+   
+   /*Alineas vertical y horizontalmente*/
+   display: flex;
+   flex-direction: column;
+   align-items: center; /*alineas horizontalmente*/
+   justify-content: center; /*alineas verticalmente*/
+}
+
+.content-hero h2, .content-hero p {
+   color: var(--white);
 }
