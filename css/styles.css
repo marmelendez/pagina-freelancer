@@ -1,10 +1,3 @@
-/* Colors
-#ffffff - white
-#f1f1f1 - gray
-#fdb827 - orange
-#21209c - blue/purple
-#23120b - black
-*/
 :root { /*pseudo selector, no existe en el html, root sirve para almacenar elementos css (custom properties)*/
     --white: #ffffff;
     --gray: #d2d2d2;
@@ -16,6 +9,7 @@
 /*font-family: 'Amaranth', sans-serif;
 font-family: 'Quicksand', sans-serif;*/
 
+/*-----Global styles-----*/
 html {
     font-size: 62.5%;
     box-sizing: border-box; /*padding, margen o border no afecta el tamaño de un elemento*/
@@ -26,35 +20,8 @@ html {
  }
  
  body {
-    font-size: 16px;/*1rem = 10px*/
+    font-size: 16px; /*1rem = 10px*/
     font-family: 'Quicksand', sans-serif;
- }
-
- h1{
-   font-size: 3.8rem;
-   font-family: 'Amaranth', sans-serif;
- }
-
- h2{
-   font-size: 2.8rem;
- }
-
- h3{
-   font-size: 1.8rem;
- }
-
- h1, h2, h3 {
-    text-align: center;
- }
- 
- .title span {
-    font-size: 2rem;
-    color:var(--orange);
- }
-
- .container {
-    max-width: 120rem;
-    margin: 0 auto;
  }
 
  .button {
@@ -74,8 +41,39 @@ html {
    .button{
       width:auto;
    }
-
 }
+
+ /*-----Typography styles-----*/
+
+ h1{
+   font-size: 3.8rem;
+   font-family: 'Amaranth', sans-serif;
+ }
+
+ h2{
+   font-size: 2.8rem;
+ }
+
+ h3{
+   font-size: 1.8rem;
+ }
+
+ h1, h2, h3 {
+    text-align: center;
+ }
+
+/*-----Title styles-----*/
+ 
+ .title span {
+    font-size: 2rem;
+    color:var(--orange);
+ }
+
+/*-----Navigation styles-----*/
+ .container {
+   max-width: 120rem;
+   margin: 0 auto;
+ }
 
  .nav-bg {
    background-color: var(--bluepurple);
@@ -118,6 +116,7 @@ html {
    color: var(--bluepurple);
 }
 
+/*-----Hero styles-----*/
 .hero {
    background-image:url(../images/hero.jpg);
    background-repeat:no-repeat; /*no se repite imagen*/
